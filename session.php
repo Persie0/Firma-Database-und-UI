@@ -4,37 +4,34 @@
 
     $email_check = $_SESSION["Email"];
     $pass_check = $_SESSION["Passwort"];
-$mode_check = $_SESSION["Mode"];
+    $mode_check = $_SESSION["Mode"];
 
-if(!(($_SESSION["Email"] === 'admin') && ($_SESSION["Passwort"] === '1234')))
-{
-    if($mode_check === "Arbeiter")
-    {
-        $sql = "SELECT * FROM arbeiter WHERE Email='$email_check' AND Passwort='$pass_check'";
-    }
-    else
-    {
-        $sql = "SELECT * FROM kunde WHERE Email='$email_check' AND Passwort='$pass_check'";
-    }
-    
-    $result = mysqli_query($conn, $sql);
+    if (!($_SESSION["Email"] === "admin" && $_SESSION["Passwort"] === "1234")) {
+        if ($mode_check === "Arbeiter") {
+            $sql = "SELECT * FROM arbeiter WHERE Email='$email_check' AND Passwort='$pass_check'";
+        } else {
+            $sql = "SELECT * FROM kunde WHERE Email='$email_check' AND Passwort='$pass_check'";
+        }
 
-    if (mysqli_num_rows($result) === 1) {
-        $row = mysqli_fetch_assoc($result);
+        $result = mysqli_query($conn, $sql);
 
-        if ($row["Email"] === $email_check && $row["Passwort"] === $pass_check) {
-            echo "Logged in!";
-            header("Location: arbeiter.php");
-            exit();
+        if (mysqli_num_rows($result) === 1) {
+            $row = mysqli_fetch_assoc($result);
+
+            if (
+                $row["Email"] === $email_check &&
+                $row["Passwort"] === $pass_check
+            ) {
+                $login_session = $row["Vorname"] . " " . $row["Nachname"];
+            } else {
+                header("location:index.php");
+                die();
+            }
         } else {
             header("location:index.php");
             die();
         }
     }
-    else {
-            header("location:index.php");
-            die();
-        }
-}
+
 
 ?>

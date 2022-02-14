@@ -92,7 +92,6 @@
                                 $_SESSION["error"] =
                                     "username/password incorrect";
                                 header("Location: index.php");
-                                exit();
                             }
 
 
