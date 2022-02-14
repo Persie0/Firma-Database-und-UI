@@ -1,124 +1,60 @@
-                <?php 
+                            <?php
+                            session_start();
 
-                session_start(); 
+                            include "connect.php";
 
-                include "connect.php";
+                            if (
+                                isset($_POST["txt_email"]) &&
+                                isset($_POST["txt_pwd"])
+                            ) {
+                                $email = $_POST["txt_email"];
 
-                if (isset($_POST['txt_email']) && isset($_POST['txt_pwd'])) {
+                                $pass = $_POST["txt_pwd"];
 
-                    $email = $_POST['txt_email'];
+                                if (empty($email)) {
+                                    header("Email is required");
 
-                    $pass = $_POST['txt_pwd'];
+                                    exit();
+                                } elseif (empty($pass)) {
+                                    header("Password is required");
 
-                    if (empty($email)) {
+                                    exit();
+                                } else {
+                                    $sql = "SELECT * FROM arbeiter WHERE Email='$email' AND Passwort='$pass'";
 
-                        header("Email is required");
+                                    $result = mysqli_query($conn, $sql);
 
-                        exit();
+                                    if (mysqli_num_rows($result) === 1) {
+                                        $row = mysqli_fetch_assoc($result);
 
-                    }else if(empty($pass)){
+                                        if (
+                                            $row["Email"] === $email &&
+                                            $row["Passwort"] === $pass
+                                        ) {
+                                            echo "Logged in!";
 
-                        header("Password is required");
+                                            $_SESSION["Email"] = $row["Email"];
 
-                        exit();
+                                            $_SESSION["Passwort"] =
+                                                $row["Passwort"];
 
-                    }else{
-                        $sql = "SELECT * FROM arbeiter WHERE Email='$email' AND Passwort='$pass'";
-
-                        $result = mysqli_query($conn, $sql);
-
-                        if (mysqli_num_rows($result) === 1) {
-
-                            $row = mysqli_fetch_assoc($result);
-
-                            if ($row['Email'] === $email && $row['Passwort'] === $pass) {
-
-                                echo "Logged in!";
-
-                                $_SESSION['Email'] = $row['Email'];
-
-                                $_SESSION['Passwort'] = $row['Passwort'];
-
+                                            exit();
+                                        } else {
+                                        $_SESSION["error"] = "username/password incorrect";
+                                        header("Location: index.php");
+                                            exit();
+                                        }
+                                    } else {
+                                        $_SESSION["error"] = "username/password incorrect";
+                                        header("Location: index.php");
+                                        exit();
+                                    }
+                                }
+                            } else {
+                                        $_SESSION["error"] = "username/password incorrect";
+                                        header("Location: index.php");
                                 exit();
-
-                            }else{
-
-                                exit();
-
                             }
-                        }else{
+                            ?>
 
-                                exit();
-
-                            }
-
-                        }
-
-                }else{
-
-                    header("Location: index.html");
-
-                    exit();
-                }
-
-        if (isset($_SESSION['Email']) && isset($_SESSION['Passwort'])) {
-
-         ?>
-
-        <!DOCTYPE html>
-
-        <html>
-
-        <head>
-
-            <title>HOME</title>
-
-            <link rel="stylesheet" type="text/css" href="style.css">
-
-        </head>
-
-        <body>
-
-             <h1>Hello</h1>
-
-             <a href="logout.php">Logout</a>
-
-        </body>
-
-        </html>
-
-        <?php 
-
-        }else{
-
-             ?>
-
-        <!DOCTYPE html>
-
-        <html>
-
-        <head>
-
-            <title>HOME</title>
-
-            <link rel="stylesheet" type="text/css" href="style.css">
-
-        </head>
-
-        <body>
-
-             <h1>Hello</h1>
-
-             <a href="logout.php">Logout</a>
-
-        </body>
-
-        </html>
-
-        <?php 
-
-             exit();
-
-        }
-
-         ?>
+ ?>
