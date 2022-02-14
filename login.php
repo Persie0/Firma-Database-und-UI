@@ -5,8 +5,8 @@
 
                             if (
                                 isset($_POST["txt_email"]) &&
-                                isset($_POST["txt_pwd"])
-                            ) {
+                                isset($_POST["txt_pwd"])) 
+                            {
                                 $email = $_POST["txt_email"];
 
                                 $pass = $_POST["txt_pwd"];
@@ -37,24 +37,52 @@
 
                                             $_SESSION["Passwort"] =
                                                 $row["Passwort"];
-
+                                            $_SESSION["Mode"] = "Arbeiter";
+                                            header("Location: arbeiter.php");
                                             exit();
                                         } else {
-                                        $_SESSION["error"] = "username/password incorrect";
-                                        header("Location: index.php");
+                                            $_SESSION["error"] =
+                                                "username/password incorrect";
+                                            header("Location: index.php");
                                             exit();
                                         }
                                     } else {
-                                        $_SESSION["error"] = "username/password incorrect";
-                                        header("Location: index.php");
-                                        exit();
+                                        $sql = "SELECT * FROM kunde WHERE Email='$email' AND Passwort='$pass'";
+
+                                        $result = mysqli_query($conn, $sql);
+
+                                        if (mysqli_num_rows($result) === 1) {
+                                            $row = mysqli_fetch_assoc($result);
+
+                                            if (
+                                                $row["Email"] === $email &&
+                                                $row["Passwort"] === $pass
+                                            ) {
+                                                echo "Logged in!";
+
+                                                $_SESSION["Email"] =
+                                                    $row["Email"];
+
+                                                $_SESSION["Passwort"] =
+                                                    $row["Passwort"];
+                                                $_SESSION["Mode"] = "Kunde";
+                                                header("Location: kunde.php");
+                                                exit();
+                                            } else {
+                                                $_SESSION["error"] =
+                                                    "username/password incorrect";
+                                                header("Location: index.php");
+                                                exit();
+                                            }
+                                        }
                                     }
                                 }
                             } else {
-                                        $_SESSION["error"] = "username/password incorrect";
-                                        header("Location: index.php");
+                                $_SESSION["error"] =
+                                    "username/password incorrect";
+                                header("Location: index.php");
                                 exit();
                             }
-                            ?>
 
- ?>
+
+?>
