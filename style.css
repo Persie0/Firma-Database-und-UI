@@ -1,0 +1,33 @@
+body {
+
+    background: grey;
+
+}
+
+#div_login input[type=submit]{
+    float: right;
+    padding: 7px;
+    width: 100px;
+
+    background: blue;
+
+    color: #fff;
+
+    border-radius: 5px;
+}
+
+input {
+
+    display: block;
+
+    border: 2px solid #ccc;
+
+    width: 95%;
+
+    padding: 10px;
+
+    margin: 10px auto;
+
+    border-radius: 5px;
+
+}
