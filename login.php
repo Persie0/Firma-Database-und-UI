@@ -37,7 +37,6 @@
 
                                             $_SESSION["Passwort"] =
                                                 $row["Passwort"];
-                                            $_SESSION["Mode"] = "Arbeiter";
                                             header("Location: arbeiter.php");
                                             exit();
                                         } else {
@@ -65,7 +64,6 @@
 
                                                 $_SESSION["Passwort"] =
                                                     $row["Passwort"];
-                                                $_SESSION["Mode"] = "Kunde";
                                                 header("Location: kunde.php");
                                                 exit();
                                             } else {
