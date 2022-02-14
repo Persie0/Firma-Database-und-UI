@@ -20,6 +20,14 @@
 
                                     exit();
                                 } else {
+                                    if(($email==='admin') && ($pass==='1234'))
+                                    {
+                                        $_SESSION["Email"] = 'admin';
+                                         $_SESSION["Passwort"] = '1234';
+                                        $_SESSION["Mode"] = "Admin";
+                                        header("Location: admin.php");
+                                    }
+                                    else{
                                     $sql = "SELECT * FROM arbeiter WHERE Email='$email' AND Passwort='$pass'";
 
                                     $result = mysqli_query($conn, $sql);
@@ -37,6 +45,8 @@
 
                                             $_SESSION["Passwort"] =
                                                 $row["Passwort"];
+                                            
+                                            $_SESSION["Mode"] = "Arbeiter";
                                             header("Location: arbeiter.php");
                                             exit();
                                         } else {
@@ -64,6 +74,8 @@
 
                                                 $_SESSION["Passwort"] =
                                                     $row["Passwort"];
+                                                
+                                            $_SESSION["Mode"] = "Kunde";
                                                 header("Location: kunde.php");
                                                 exit();
                                             } else {
@@ -74,6 +86,7 @@
                                             }
                                         }
                                     }
+                                }
                                 }
                             } else {
                                 $_SESSION["error"] =
