@@ -6,4 +6,4 @@ C:\xampp\htdocs\
 
 run XAMPP
 visit
-http://localhost/LogosWS/index.php
+http://localhost/Firma-Database-und-UI/index.php
