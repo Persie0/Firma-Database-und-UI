@@ -3,7 +3,7 @@
     ?>
 
     <!DOCTYPE html>
-            <html>
+            <html lang="en">
             <head>
                 <title>Log In</title>
                 <link rel="stylesheet" href="style.css">
@@ -14,10 +14,10 @@
                 <div id="div_login">
                     <h1>Login</h1>
                     <div>
-                        <input type="text" class="textbox" id="txt_email" name="txt_email" placeholder="Email" />
+                        <label for="txt_email"></label><input type="text" class="textbox" id="txt_email" name="txt_email" placeholder="Email" />
                     </div>
                     <div>
-                        <input type="password" class="textbox" id="txt_pwd" name="txt_pwd" placeholder="Password"/>
+                        <label for="txt_pwd"></label><input type="password" class="textbox" id="txt_pwd" name="txt_pwd" placeholder="Password"/>
                     </div>
                     <div>
                         <input type="submit" value="Login" name="but_login" id="but_login" />
