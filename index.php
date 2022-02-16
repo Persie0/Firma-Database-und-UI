@@ -32,11 +32,13 @@ session_start();
 
                     <label for="txt_pwd"></label><input type="password" class="textbox" id="txt_pwd" name="txt_pwd" placeholder="Password"/>
 
-                    <div class="remember-form">
-                        <label>
-                            <input type="checkbox">
-                        </label>
-                        <span>Remember me</span>
+                    <div class="error-message">
+                        <?php
+                        if(isset($_SESSION["error"])){
+                            $error = $_SESSION["error"];
+                            echo "<span>$error</span>";
+                        }
+                        ?>
                     </div>
                     <div class="forget-pass">
                         <a href="#">Forgot Password ?</a>
@@ -50,12 +52,6 @@ session_start();
         </div>
     </div>
 </div>
-<?php
-if(isset($_SESSION["error"])){
-    $error = $_SESSION["error"];
-    echo "<span>$error</span>";
-}
-?>
 </body>
 </html>
 

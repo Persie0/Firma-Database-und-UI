@@ -47,7 +47,7 @@ if (isset($_POST["txt_email"]) && isset($_POST["txt_pwd"])) {
                     header("Location: kunde.php");
                 }
                 else {
-                    $_SESSION["error"] = "username/password incorrect";
+                    $_SESSION["error"] = "Email/Password incorrect";
                     header("Location: index.php");
                 }
             }
@@ -55,7 +55,7 @@ if (isset($_POST["txt_email"]) && isset($_POST["txt_pwd"])) {
         }
     }
 } else {
-    $_SESSION["error"] = "username/password incorrect";
+    $_SESSION["error"] = "Email/Password incorrect";
     header("Location: index.php");
 }
 
