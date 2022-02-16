@@ -6,7 +6,7 @@ session_start();
 <html lang="en">
 <head>
     <title>Log In</title>
-    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>  // TODO change logo
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
