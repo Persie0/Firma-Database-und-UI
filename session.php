@@ -6,7 +6,7 @@
     $pass_check = $_SESSION["Passwort"];
     $mode_check = $_SESSION["Mode"];
 
-    if (!($_SESSION["Email"] === "admin" && $_SESSION["Passwort"] === "1234")) {
+    if (!($_SESSION["Email"] === "admin@mail.com" && $_SESSION["Passwort"] === "1234")) {
         if ($mode_check === "Arbeiter") {
             $sql = "SELECT * FROM arbeiter WHERE Email='$email_check' AND Passwort='$pass_check'";
         } else {

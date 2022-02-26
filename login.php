@@ -17,8 +17,8 @@ if (isset($_POST["txt_email"]) && isset($_POST["txt_pwd"])) {
         header("Location: index.php");
         exit();
     } else {
-        if ($email === "admin" && $pass === "1234") {
-            $_SESSION["Email"]    = "admin";
+        if ($email === "admin@mail.com" && $pass === "1234") {
+            $_SESSION["Email"]    = "admin@mail.com";
             $_SESSION["Passwort"] = "1234";
             $_SESSION["Mode"]     = "Admin";
             header("Location: admin.php");
@@ -58,6 +58,3 @@ if (isset($_POST["txt_email"]) && isset($_POST["txt_pwd"])) {
     $_SESSION["error"] = "Email/Password incorrect";
     header("Location: index.php");
 }
-
-
-?>
