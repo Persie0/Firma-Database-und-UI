@@ -7,7 +7,7 @@ include "display_data.php";
 <html lang="en">
 <head>
     <title>Overview </title>
-    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png"/>
 </head>
 
 <body>
@@ -23,7 +23,7 @@ $result = mysqli_query($conn, $query);
 display_data($result);
 ?>
 
-<h2><a href = "logout.php">Sign Out</a></h2>
+<h2><a href = "../php_functions/logout.php">Sign Out</a></h2>
 </body>
 
 </html>

@@ -6,13 +6,13 @@ session_start();
 <html lang="en">
 <head>
     <title>Log In</title>
-    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
-    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png"/>
+    <link rel="stylesheet" href="../css_files/style.css">
 </head>
 <body>
 <div class="parent clearfix">
     <div class="bg-illustration">
-        <img src="images/favicon.png" alt="logo">
+        <img src="../images/favicon.png" alt="logo">
 
         <div class="burger-btn">
             <span></span>
@@ -27,7 +27,7 @@ session_start();
             <h1>Login to access to<br />your account</h1>
 
             <div class="login-form">
-                <form method="post" action="login.php" >
+                <form method="post" action="../php_functions/login.php" >
                     <label for="txt_email"></label><input type="email" class="textbox" id="txt_email" name="txt_email" placeholder="Email" />
 
                     <label for="txt_pwd"></label><input type="password" class="textbox" id="txt_pwd" name="txt_pwd" placeholder="Password"/>
@@ -43,8 +43,7 @@ session_start();
                     <div class="forget-pass">
                         <a href="#">Forgot Password ?</a>
                     </div>
-
-                    <button type="submit">LOG-IN</button>
+                    <button type="submit">Login</button>
 
                 </form>
             </div>
