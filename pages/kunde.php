@@ -1,7 +1,7 @@
 <?php
-include "session.php";
-include "connect.php";
-include "display_data.php";
+include "../php_functions/session.php";
+include "../php_functions/connect.php";
+include "../php_functions/display_data.php";
 
 ?>
 <html lang="en">

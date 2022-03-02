@@ -1,5 +1,5 @@
     <?php
-    include "connect.php";
+    include "../php_functions/connect.php";
     session_start();
 
     $email_check = $_SESSION["Email"];
@@ -24,11 +24,11 @@
             ) {
                 $login_session = $row["Vorname"] . " " . $row["Nachname"];
             } else {
-                header("location:index.php");
+                header("location: ../pages/index.php");
                 die();
             }
         } else {
-            header("location:index.php");
+            header("location: ../pages/index.php");
             die();
         }
     }

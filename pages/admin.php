@@ -1,7 +1,7 @@
 <?php
-include "session.php";
-include "connect.php";
-include "display_data.php";
+include "../php_functions/session.php";
+include "../php_functions/connect.php";
+include "../php_functions/display_data.php";
 
 ?>
 <html lang="en">
@@ -13,11 +13,8 @@ include "display_data.php";
 
 <body>
 <ul>
-    <li><a href="./index.html">Projekt Homepage</a></li>
-    <li><a href="./aufgabenstellung.html">Aufgabenstellung</a></li>
-    <li> <a href="./loesungsweg.html">Lösungsweg</a></li>
-    <li> <a href="./autor.html">Person hinter dem Projekt</a></li>
-    <li> <a href="./ergebniss.html">Ergebniss</a></li>
+    <li><a href="admin.php">Alle Daten</a></li>
+    <li><a href="./index.html">Offene Aufträge</a></li>
 </ul>
 
 <h1>Welcome Admin</h1>
