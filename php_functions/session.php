@@ -1,5 +1,5 @@
     <?php
-    include "../php_functions/connect.php";
+    include "connect.php";
     session_start();
 
     $email_check = $_SESSION["Email"];

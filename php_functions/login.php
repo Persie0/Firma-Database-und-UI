@@ -21,7 +21,7 @@ if (isset($_POST["txt_email"]) && isset($_POST["txt_pwd"])) {
             $_SESSION["Email"]    = "admin@mail.com";
             $_SESSION["Passwort"] = "1234";
             $_SESSION["Mode"]     = "Admin";
-            header("Location: ../pages/admin.php");
+            header("Location: ../pages/admin_pages/admin.php");
         } else {
             $sql = "SELECT * FROM arbeiter WHERE Email='$email' AND Passwort='$pass'";
 
@@ -35,7 +35,7 @@ if (isset($_POST["txt_email"]) && isset($_POST["txt_pwd"])) {
                 $_SESSION["Passwort"] = $row["Passwort"];
 
                 $_SESSION["Mode"] = "Arbeiter";
-                header("Location: ../pages/arbeiter.php");
+                header("Location: ../pages/arbeiter_pages/arbeiter.php");
             } else {
                 $sql = "SELECT * FROM kunde WHERE Email='$email' AND Passwort='$pass'";
                 $result = mysqli_query($conn, $sql);
@@ -44,7 +44,7 @@ if (isset($_POST["txt_email"]) && isset($_POST["txt_pwd"])) {
                     $_SESSION["Email"] = $row["Email"];
                     $_SESSION["Passwort"] = $row["Passwort"];
                     $_SESSION["Mode"] = "Kunde";
-                    header("Location: ../pages/kunde.php");
+                    header("Location: ../pages/kunde_pages/kunde.php");
                 }
                 else {
                     $_SESSION["error"] = "Email/Password incorrect";

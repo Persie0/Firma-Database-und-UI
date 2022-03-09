@@ -59,7 +59,7 @@ img {
     position: relative;
     height: 100vh;
     width: 1194px;
-    background: url("https://i.ibb.co/RhMZprS/jony-Image2-1.png") no-repeat center center scroll;
+    background: url("https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F1156660.jpg&sp=1646675388T38bd38523ace19e7436834ea88ed291092da8b7ae5ae5bac23cb75992bd135e9") no-repeat center center scroll;
     background-size: cover;
     float: left;
     -webkit-animation: bgslide 2.3s forwards;
@@ -137,9 +137,7 @@ img {
     border-radius: 10px;
 }
 .login .container .login-form form button[type=submit] {
-    background: -webkit-linear-gradient(315deg, #0cbaba 0%, #380036 74%);
-    background: -o-linear-gradient(315deg, #0cbaba 0%, #380036 74%);
-    background: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+    background: black;
     border: none;
     margin-top: 124px;
     margin-bottom: 20px;
