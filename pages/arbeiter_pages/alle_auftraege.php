@@ -2,6 +2,7 @@
 include "../../php_functions/session.php";
 include "../../php_functions/connect.php";
 include "../../php_functions/display_data.php";
+
 ?>
 <html lang="en">
 <head>
@@ -12,18 +13,22 @@ include "../../php_functions/display_data.php";
 
 <body>
 <div class="topnav">
-    <a class="active" href="admin.php">Alle Aufträge</a>
+    <a  href="arbeiter.php">Offene Aufträge</a>
+    <a class="active" href="alle_auftraege.php">Alle Aufträge</a>
     <a class="logout" href = "../../php_functions/logout.php">Sign Out</a>
 </div>
-
-<h1>Welcome Admin</h1>
-<h3>Offene Aufträge:</h3>
+<h1>Willkommen Arbeiter</h1>
+<h3>Alle Aufträge:</h3>
 <?php
-$query = "select Deadline,Preis,Erstelldatum,Art,Standort,Zustand,Typ,Vorname as 'Arbeitervorname',Nachname as 'Arbeiternachname' from auftrag join logo on logo.id = auftrag.logoid join arbeiter on arbeiter.ID = auftrag.ArbeiterID where erledigt = 'N' order by Deadline;";
+$query = "select auftrag.id ,logo.standort, deadline, typ, art, erledigt
+from logo join auftrag on logo.id = auftrag.logoid join arbeiter on auftrag.arbeiterid = arbeiter.id
+ WHERE Email='$email_check' AND Passwort='$pass_check';
+";
 $result = mysqli_query($conn, $query);
 
 display_data($result);
 ?>
+
 </body>
 
 </html>

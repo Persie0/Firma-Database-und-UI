@@ -1,5 +1,3 @@
-create database firma_db;
-use firma_db;
 
 DROP TABLE IF EXISTS Logo;
 create table Logo(
@@ -58,6 +56,7 @@ insert into Arbeiter (Vorname, Nachname, Telefonnummer, Email, Passwort) value (
 
 DROP TABLE IF EXISTS Auftrag;
 create table Auftrag(
+ID int NOT NULL AUTO_INCREMENT,
 Preis int NOT NULL,
 Erstelldatum DATE,
 Deadline DATE NOT NULL,
@@ -66,6 +65,7 @@ Erledigt VARCHAR(1) NOT NULL DEFAULT 'N',
 LogoID int NOT NULL,
 KundeID int NOT NULL,
 ArbeiterID int NOT NULL,
+primary key (id),
 FOREIGN KEY (LogoID) REFERENCES Logo(ID),
 FOREIGN KEY (KundeID) REFERENCES Kunde(ID),
 FOREIGN KEY (ArbeiterID) REFERENCES Arbeiter(ID)
