@@ -6,4 +6,4 @@ C:\xampp\htdocs\
 
 run XAMPP & 
 visit
-http://localhost/Firma-Database-und-UI/index.php
+http://localhost/Firma-Database-und-UI/pages/index.php
