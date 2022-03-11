@@ -13,6 +13,7 @@ include "../../php_functions/display_data.php";
 <body>
 <div class="topnav">
     <a class="active" href="kunde.php">Alle Aufträge</a>
+    <a href="add_auftrag.php">Auftrag hinzufügen</a>
     <a class="logout" href = "../../php_functions/logout.php">Sign Out</a>
 </div>
 <h1>Willkommen Kunde</h1>
