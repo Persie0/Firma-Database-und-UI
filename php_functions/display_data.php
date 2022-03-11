@@ -11,7 +11,7 @@ function display_data_erledigt($data) {
             }
         }
         if ($column !== 0)
-                $output .= '<td>' . '<a href="../../php_functions/erledigt.php?id=' . $var["id"] . '"> Done</a>' . '</td>';
+                $output .= '<td>' . '<a href="../../php_functions/erledigt.php?id=' . $var["id"]  . '"class="button"> Auftrag erledigt!</a>' . '</td>';
         $output .= '</tr>';
     }
     $output .= '</table>';

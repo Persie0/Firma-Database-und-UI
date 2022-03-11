@@ -17,6 +17,7 @@ include "../../php_functions/display_data.php";
     <a href="alle_auftraege.php">Alle Aufträge</a>
     <a class="logout" href = "../../php_functions/logout.php">Sign Out</a>
 </div>
+
 <h1>Willkommen Arbeiter</h1>
 <h3>Offene Aufträge:</h3>
 <?php
