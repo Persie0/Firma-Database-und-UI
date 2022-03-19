@@ -17,37 +17,38 @@ include "../../php_functions/display_data.php";
     <a class="logout" href = "../../php_functions/logout.php">Sign Out</a>
 </div>
 <h1>Willkommen Kunde</h1>
-<h3>Auftrag hinzufügen</h3>
 
 
-<form action="../../php_functions/add_auftrag.php" method="post">
-        Location:
-        <label for="location"></label><input type="text"
+<form class="returnOrder" action="../../php_functions/add_auftrag.php" method="post">
+    <h4 class="returnTitle"> Auftrag hinzufügen </h4>
+    <br>
+
+        <label for="location">Gebäudeort:</label><input type="text"
                                            id="location"
                                            placeholder="location">
 <br>
-    <label for="type_select">Choose a type:</label>
-    <select name="type" id="type_select">
-        <option value="A1">A1</option>
-        <option value="A2">A2</option>
-        <option value="A3">A3</option>
-        <option value="B1">B1</option>
-        <option value="B2">B2</option>
-        <option value="B3">B3</option>
+    <label for="type_select">Logotyp::</label>
+    <select class="drop-down" name="type" id="type_select">
+        <option value="A1">A1 - 1200€</option>
+        <option value="A2">A2 - 1100€</option>
+        <option value="A3">A3 - 1000€</option>
+        <option value="B1">B1 - 800€</option>
+        <option value="B2">B2 - 600€</option>
+        <option value="B3">B3 - 500€</option>
     </select>
     <br>
     <label for="deadline">Deadline:</label>
     <input type="date" id="deadline" name="deadline">
     <br>
-    Auftragsart:
-    <label for="auftragsart">
-    </label><select name="auftragsart" id="auftragsart">
-        <option value="repair">repair</option>
-        <option value="new">anbringen</option>
-        <option value="delete">abbauen</option>
+
+    <label for="auftragsart">Auftragsart:
+    </label><select class="drop-down" name="auftragsart" id="auftragsart">
+        <option value="repair">Reparieren</option>
+        <option value="new">Anbringen</option>
+        <option value="delete">Abbauen</option>
     </select>
     <br>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Auftrag hinzufügen">
 </form>
 
 </body>

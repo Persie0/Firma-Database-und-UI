@@ -206,6 +206,20 @@ a.logout:hover {
     color: black;
 }
 
+a.name {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+a.name:hover {
+    background-color: transparent;
+    color: white;
+}
+
 .button {
     border-radius:2px;
     text-decoration: none;
@@ -216,4 +230,62 @@ a.logout:hover {
     border-right: 1px solid #333333;
     border-bottom: 1px solid #333333;
     border-left: 1px solid #CCCCCC;
+}
+
+select {
+    width: 95%;
+    padding: 12px 20px;
+    margin: auto 0;
+    display: block;
+    border-radius: 4px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.returnOrder input[type=date],
+.returnOrder input[type=text] {
+    width: 95%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: none;
+    text-align: left;
+}
+
+.returnOrder input[type=date]:focus,
+.returnOrder input[type=text]:focus {
+    border: 1px solid #a8a8a8;
+}
+
+
+.returnOrder input[type=submit],
+.returnOrder input[type=button] {
+    float: right;
+    margin: -20px 20px 10px 0;
+}
+
+.returnOrder {
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    padding: 40px;
+    width: 40%;
+    margin: 20px auto 0;
+    box-shadow: 1px 1px 5px #888888;
+}
+
+select {
+    width: 95%;
+    padding: 12px 20px;
+    margin: auto 0;
+    display: block;
+    border-radius: 4px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.returnTitle {
+    text-align: center;
 }
