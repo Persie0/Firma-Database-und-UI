@@ -12,7 +12,7 @@ session_start();
     <body>
     <div class="parent clearfix">
         <div class="bg-illustration">
-            <img src="../images/favicon.png" alt="logo">
+            <!--<img src="../images/favicon.png" alt="logo">-->
         </div>
 
         <div class="login">
