@@ -14,9 +14,9 @@ include "../../php_functions/display_data.php";
 <div class="topnav">
     <a class="active" href="admin.php">Alle Aufträge</a>
     <a class="logout" href = "../../php_functions/logout.php">Sign Out</a>
+    <a class="name" ><?php echo $login_session?></a>
 </div>
 
-<h1>Welcome Admin</h1>
 <h3>Offene Aufträge:</h3>
 <?php
 $query = "select Deadline,Preis,Erstelldatum,Art,Standort,Zustand,Typ,Vorname as 'Arbeitervorname',Nachname as 'Arbeiternachname' from auftrag join logo on logo.id = auftrag.logoid join arbeiter on arbeiter.ID = auftrag.ArbeiterID where erledigt = 'N' order by Deadline;";

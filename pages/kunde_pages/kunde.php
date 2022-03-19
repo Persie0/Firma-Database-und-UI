@@ -18,7 +18,6 @@ include "../../php_functions/display_data.php";
     <a class="logout" href = "../../php_functions/logout.php">Sign Out</a>
     <a class="name" ><?php echo $login_session?></a>
 </div>
-<h1>Willkommen Kunde</h1>
 <h3>Alle Aufträge:</h3>
 <?php
 $query = "select preis, art, erstelldatum, standort, deadline, erledigt

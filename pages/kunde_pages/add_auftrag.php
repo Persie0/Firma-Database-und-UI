@@ -15,8 +15,8 @@ include "../../php_functions/display_data.php";
     <a href="kunde.php">Alle Aufträge</a>
     <a class="active" href="add_auftrag.php">Auftrag hinzufügen</a>
     <a class="logout" href = "../../php_functions/logout.php">Sign Out</a>
+    <a class="name" ><?php echo $login_session?></a>
 </div>
-<h1>Willkommen Kunde</h1>
 
 
 <form class="returnOrder" action="../../php_functions/add_auftrag.php" method="post">

@@ -16,8 +16,8 @@ include "../../php_functions/display_data.php";
     <a  href="arbeiter.php">Offene Aufträge</a>
     <a class="active" href="alle_auftraege.php">Alle Aufträge</a>
     <a class="logout" href = "../../php_functions/logout.php">Sign Out</a>
+    <a class="name" ><?php echo $login_session?></a>
 </div>
-<h1>Willkommen Arbeiter</h1>
 <h3>Alle Aufträge:</h3>
 <?php
 $query = "select auftrag.id ,logo.standort, deadline, typ, art, erledigt

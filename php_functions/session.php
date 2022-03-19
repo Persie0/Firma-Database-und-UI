@@ -31,4 +31,8 @@
             die();
         }
     }
+    else
+    {
+        $login_session = "Admin";
+    }
 ?>

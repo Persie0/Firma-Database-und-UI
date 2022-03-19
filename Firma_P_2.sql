@@ -1,3 +1,5 @@
+create database firma_db;
+use firma_db;
 
 DROP TABLE IF EXISTS Logo;
 create table Logo(
