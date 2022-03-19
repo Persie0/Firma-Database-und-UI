@@ -20,7 +20,7 @@ function display_data_erledigt($data) {
 }
 
 function display_data($data) {
-    $output = "<table>";
+    $output = "<table class='data_table'>";
     foreach($data as $key => $var) {
         $output .= '<tr>';
         if($key===0) {

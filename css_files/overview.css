@@ -220,35 +220,16 @@ a.name:hover {
     color: whitesmoke;
 }
 
-.button {
-    border-radius:2px;
-    text-decoration: none;
-    background-color: rgba(255, 255, 255, .3);
-    color: white;
-    padding: 2px 6px 2px 6px;
-    border-top: 1px solid #CCCCCC;
-    border-right: 1px solid #333333;
-    border-bottom: 1px solid #333333;
-    border-left: 1px solid #CCCCCC;
-}
 
-select {
-    width: 95%;
-    padding: 12px 20px;
-    margin: auto 0;
-    display: block;
-    border-radius: 4px;
-    text-align: left;
-    font-size: 16px;
-}
-
+.returnOrder select,
 .returnOrder input[type=date],
+.returnOrder input[type=select],
 .returnOrder input[type=text] {
     width: 95%;
     padding: 12px 20px;
     margin: 8px 0;
     display: block;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     border-radius: 4px;
     box-sizing: border-box;
     resize: none;
@@ -261,19 +242,22 @@ select {
 }
 
 
-.returnOrder input[type=submit],
-.returnOrder input[type=button] {
+.returnOrder input[type=submit]{
     float: right;
-    margin: -20px 20px 10px 0;
+    margin: auto;
 }
 
 .returnOrder {
     border-radius: 5px;
     background-color: #f8f8f8;
     padding: 40px;
-    width: 40%;
+    width: 60%;
     margin: 20px auto 0;
     box-shadow: 1px 1px 5px #888888;
+}
+
+.data_table {
+    margin-top: 3%;
 }
 
 select {

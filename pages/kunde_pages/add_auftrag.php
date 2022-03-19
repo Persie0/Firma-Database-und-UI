@@ -26,15 +26,15 @@ include "../../php_functions/display_data.php";
         <label for="location">Gebäudeort:</label><input type="text"
                                            id="location"
                                            placeholder="location">
-<br>
-    <label for="type_select">Logotyp::</label>
-    <select class="drop-down" name="type" id="type_select">
-        <option value="A1">A1 - 1200€</option>
-        <option value="A2">A2 - 1100€</option>
-        <option value="A3">A3 - 1000€</option>
-        <option value="B1">B1 - 800€</option>
-        <option value="B2">B2 - 600€</option>
-        <option value="B3">B3 - 500€</option>
+    <br>
+    <label for="type_select">Logotyp:</label>
+    <select class="type_select" id="type_select" name="type_select">
+        <option value="A1|1200">A1 - 1200€</option>
+        <option value="A2|1100">A2 - 1100€</option>
+        <option value="A3|1000">A3 - 1000€</option>
+        <option value="B1|800">B1 - 800€</option>
+        <option value="B2|600">B2 - 600€</option>
+        <option value="B3|500">B3 - 500€</option>
     </select>
     <br>
     <label for="deadline">Deadline:</label>
