@@ -20,7 +20,7 @@ include "../../php_functions/display_data.php";
 </div>
 <h3>Alle Aufträge:</h3>
 <?php
-$query = "select auftrag.id ,logo.standort, deadline, typ, art, erledigt
+$query = "select logo.standort, deadline, typ, art, erledigt
 from logo join auftrag on logo.id = auftrag.logoid join arbeiter on auftrag.arbeiterid = arbeiter.id
  WHERE Email='$email_check' AND Passwort='$pass_check';
 ";
