@@ -207,8 +207,8 @@ a.logout:hover {
 }
 
 a.name {
+    color: grey;
     float: right;
-    color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -217,7 +217,7 @@ a.name {
 
 a.name:hover {
     background-color: transparent;
-    color: white;
+    color: grey;
 }
 
 .button {
