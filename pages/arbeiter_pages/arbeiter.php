@@ -19,7 +19,6 @@ include "../../php_functions/display_data.php";
     <a class="name" ><?php echo $login_session?></a>
 </div>
 
-<h3>Offene Aufträge:</h3>
 <?php
 $query = "select auftrag.id ,logo.standort, deadline, typ, art, erledigt
 from logo join auftrag on logo.id = auftrag.logoid join arbeiter on auftrag.arbeiterid = arbeiter.id

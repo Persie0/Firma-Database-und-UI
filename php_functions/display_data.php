@@ -1,6 +1,6 @@
 <?php
 function display_data_erledigt($data) {
-    $output = '<table>';
+    $output = "<table class='data_table'>";
     foreach($data as $column => $var) {
         $output .= '<tr>';
         if($column===0) {
@@ -35,5 +35,16 @@ function display_data($data) {
         $output .= '</tr>';
     }
     $output .= '</table>';
+    echo $output;
+}
+
+function display_options($data) {
+    $output ="";
+    foreach($data as $var) {
+        foreach($var as $val) {
+            $output .= ' <option value="';
+            $output .= $val . '">'. $val . "</option>";
+        }
+    }
     echo $output;
 }

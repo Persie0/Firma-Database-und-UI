@@ -19,14 +19,14 @@ include "../../php_functions/display_data.php";
     <a class="name" ><?php echo $login_session?></a>
 </div>
 <div>
-<?php
-$query = "select preis, art, erstelldatum, standort, deadline, erledigt
-from logo join auftrag on logo.id = auftrag.logoid join kunde on auftrag.kundeid = kunde.id WHERE Email='$email_check' AND Passwort='$pass_check' order by Erstelldatum desc;
+    <?php
+    $query = "select preis, art, erstelldatum, standort, deadline, erledigt
+from logo join auftrag on logo.id = auftrag.logoid join kunde on auftrag.kundeid = kunde.id WHERE Email='$email_check' AND Passwort='$pass_check' order by auftrag.ID desc;
 ";
-$result = mysqli_query($conn, $query);
+    $result = mysqli_query($conn, $query);
 
-display_data($result);
-?>
+    display_data($result);
+    ?>
 </div>
 </body>
 

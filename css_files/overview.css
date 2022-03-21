@@ -179,7 +179,17 @@ table td:before {
     background-color: #ddd;
     color: black;
 }
-
+.button {
+    border-radius:2px;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, .3);
+    color: white;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
 /* Add a color to the active/current link */
 .topnav a.active {
     background-color: grey;
@@ -247,7 +257,7 @@ a.name:hover {
     border-radius: 5px;
     background-color: #f8f8f8;
     padding: 40px;
-    width: 60%;
+    width: 65%;
     margin: 20px auto 0;
     box-shadow: 1px 1px 5px #888888;
 }
