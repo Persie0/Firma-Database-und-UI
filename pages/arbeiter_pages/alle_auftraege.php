@@ -15,7 +15,7 @@ include "../../php_functions/display_data.php";
 <div class="topnav">
     <a  href="arbeiter.php">Offene Aufträge</a>
     <a class="active" href="alle_auftraege.php">Alle Aufträge</a>
-    <a class="logout" href = "../../php_functions/logout.php">Sign Out</a>
+    <a class="logout" href = "../../php_functions/logout.php">Ausloggen</a>
     <a class="name" ><?php echo $login_session?></a>
 </div>
 <div>

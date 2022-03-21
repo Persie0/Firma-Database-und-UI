@@ -13,7 +13,7 @@ include "../../php_functions/display_data.php";
 <body>
 <div class="topnav">
     <a class="active" href="admin.php">Alle Aufträge</a>
-    <a class="logout" href = "../../php_functions/logout.php">Sign Out</a>
+    <a class="logout" href = "../../php_functions/logout.php">Ausloggen</a>
     <a class="name" ><?php echo $login_session?></a>
 </div>
 
