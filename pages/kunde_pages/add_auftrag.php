@@ -39,9 +39,8 @@ from logo join auftrag on logo.id = auftrag.logoid join kunde on auftrag.kundeid
         ?>
     </select>
     <div id="advanced">
-        <label for="location">Gebäudeort:</label><input type="text"
-                                                        id="location"
-                                                        placeholder="location">
+        <label for="location">Gebäudeort:</label><input type="text" id="location" placeholder="location"
+        name="location">
         <label for="type_select">Logotyp:</label>
         <select class="type_select" id="type_select" name="type_select">
             <option value="A1|1200">A1 - 1200€</option>
@@ -64,6 +63,12 @@ from logo join auftrag on logo.id = auftrag.logoid join kunde on auftrag.kundeid
         </select>
     </div>
     <br>
+    <?php
+    if(isset($_SESSION["error"])){
+        $error = $_SESSION["error"];
+        echo "<span>$error</span>";
+    }
+    ?>
     <input type="submit" value="Auftrag hinzufügen">
     <script>
         document.getElementById("logo_select").onchange = function () {
@@ -76,3 +81,7 @@ from logo join auftrag on logo.id = auftrag.logoid join kunde on auftrag.kundeid
 </body>
 
 </html>
+
+<?php
+unset($_SESSION["error"]);
+?>
