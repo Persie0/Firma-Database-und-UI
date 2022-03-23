@@ -1,7 +1,7 @@
 <?php
 session_start();
 ?>
-
+<!--Login/Index Seite, zeigt Login-Form für User an-->
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -27,6 +27,7 @@ session_start();
 
                         <div class="error-message">
                             <?php
+                            /*Falls error beim Einloggen*/
                             if(isset($_SESSION["error"])){
                                 $error = $_SESSION["error"];
                                 echo "<span>$error</span>";
@@ -48,5 +49,6 @@ session_start();
     </html>
 
 <?php
+/*Error wieder löschen*/
 unset($_SESSION["error"]);
 ?>

@@ -44,7 +44,7 @@ VALUES ('$location', '$logo', '$type');";
         from logo WHERE logo.Standort='$location' and typ='$type' and Zustand='$logo';
         ";
             $result = mysqli_query($conn, $query);
-            if (mysqli_num_rows($result) !== 1) {
+            if (mysqli_num_rows($result) !== 1) {#TODO: check if logo already exists
                 $_SESSION["error"] = "Error beim Erstellen des neuen Logos:";
                 header("Location: ../pages/kunde_pages/add_auftrag.php");
                 exit();

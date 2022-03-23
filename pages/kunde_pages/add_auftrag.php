@@ -1,11 +1,13 @@
 <?php
+/*Hier kann der Kunde einen neuen Auftrag hinzufügen
+mittels verschiedenen Formelementen*/
 include "../../php_functions/session.php";
 include "../../php_functions/connect.php";
 include "../../php_functions/display_data.php";
 ?>
 <html lang="en">
 <head>
-    <title>Overview </title>
+    <title>Auftrag hinzufügen </title>
     <link rel="shortcut icon" type="image/png" href="../../images/favicon.png"/>
     <link rel="stylesheet" href="../../css_files/overview.css">
 </head>
@@ -30,6 +32,7 @@ include "../../php_functions/display_data.php";
     <select class="type_select" id="logo_select" name="logo_select">
         <option value="new">new</option>
         <?php
+        /*Alle Standorte des Users als Option ausgeben*/
         $query = "select distinct standort
 from logo join auftrag on logo.id = auftrag.logoid join kunde on auftrag.kundeid = kunde.id WHERE Email='$email_check' AND Passwort='$pass_check' order by Erstelldatum;
 ";
@@ -64,6 +67,7 @@ from logo join auftrag on logo.id = auftrag.logoid join kunde on auftrag.kundeid
     </div>
     <br>
     <?php
+    /*Falls error beim Hinzufügen*/
     if(isset($_SESSION["error"])){
         $error = $_SESSION["error"];
         echo "<span>$error</span>";
@@ -71,6 +75,8 @@ from logo join auftrag on logo.id = auftrag.logoid join kunde on auftrag.kundeid
     ?>
     <input type="submit" value="Auftrag hinzufügen">
     <script>
+        /*Je nachdem ob ein neuer Standort hinzugefügt wird oder nicht, werden
+        * verschiedene Optionen bei Auftragsart angezeigt*/
         document.getElementById("logo_select").onchange = function () {
             document.getElementById("advanced2").style.display = document.getElementById("logo_select").value === "new" ? "none" : "block";
             document.getElementById("advanced").style.display = document.getElementById("logo_select").value === "new" ? "block" : "none";
@@ -83,5 +89,6 @@ from logo join auftrag on logo.id = auftrag.logoid join kunde on auftrag.kundeid
 </html>
 
 <?php
+/*Error wieder löschen*/
 unset($_SESSION["error"]);
 ?>

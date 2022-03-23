@@ -1,5 +1,7 @@
 <?php
 session_start();
+/*Funktionen der login Seite, leitet Admin, Arbeiter oder Kunde zu jeweiliger Seite weiter
+und speichert Daten als Session*/
 
 include "../php_functions/connect.php";
 

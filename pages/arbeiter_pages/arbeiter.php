@@ -1,3 +1,5 @@
+<!--Arbeiterseite, zu der man nach dem Login als Arbeiter hinkommt
+man kann Aufträge als erledigt markieren-->
 <?php
 include "../../php_functions/session.php";
 include "../../php_functions/connect.php";
@@ -6,7 +8,7 @@ include "../../php_functions/display_data.php";
 ?>
 <html lang="en">
 <head>
-    <title>Overview </title>
+    <title>Auftrag erledigen </title>
     <link rel="shortcut icon" type="image/png" href="../../images/favicon.png"/>
     <link rel="stylesheet" href="../../css_files/overview.css">
 </head>
@@ -25,7 +27,7 @@ from logo join auftrag on logo.id = auftrag.logoid join arbeiter on auftrag.arbe
  WHERE Email='$email_check' AND Passwort='$pass_check' and Erledigt = 'N' order by Deadline;
 ";
 $result = mysqli_query($conn, $query);
-
+/*Ausstehende Aufträge des Arbeiters anzeigen*/
 display_data_erledigt($result);
 ?>
 
