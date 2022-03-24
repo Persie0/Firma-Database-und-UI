@@ -1,13 +1,13 @@
 <?php
 
-//gibt ganzen Daten des übergebenen Datensatz als  Table aus + Erledigt "Button"
+//gibt ganzen Daten des übergebenen Datensatz als Table aus + Erledigt "Button"
 function display_data_erledigt($data) {
     $output = "<table class='data_table'>";
-    foreach($data as $row => $var) {//alle "Zeilen" der Tabelle durchgehen
+    foreach($data as $col => $var) {//alle "Zeilen" der Tabelle durchgehen
         $output .= '<tr>';
-        if($row===0) {//in Zeile 0 sind die table headers (Name der Entitäten)
-            foreach($var as $col => $val) {//alle "Reihen" der Zeile durchgehen
-                $output .= "<td>" . $col . '</td>';
+        if($col===0) {//in Zeile 0 sind die table headers (Name der Entitäten)
+            foreach($var as $row => $val) {//alle "Reihen" der Zeile durchgehen
+                $output .= "<td>" . $row . '</td>';
             }
             $output .= '</tr>';
         }
@@ -21,14 +21,14 @@ function display_data_erledigt($data) {
     echo $output;
 }
 
-//gibt ganzen Daten des übergebenen Datensatz als  Table aus
+//gibt ganzen Daten des übergebenen Datensatz als Table aus
 function display_data($data) {
     $output = "<table class='data_table'>";
-    foreach($data as $row => $var) {
+    foreach($data as $column => $var) {
         $output .= '<tr>';
-        if($row===0) {
-            foreach($var as $col => $val) {
-                $output .= "<td>" . $col . '</td>';
+        if($column===0) {
+            foreach($var as $row => $val) {
+                $output .= "<td>" . $row . '</td>';
             }
             $output .= '</tr>';
         }
@@ -55,14 +55,14 @@ function display_options($data) {
 
 
 
-//gibt ganzen Daten des übergebenen Datensatz als  Table aus + Erledigt "Button"
+//gibt ganzen Daten des übergebenen Datensatz als Table aus + Auswahl von Arbeiter und Button um auswahl zu speichern
 function display_data_edit($data, $options) {
     $output = "<table class='data_table'>";
-    foreach($data as $row => $var) {//alle "Zeilen" der Tabelle durchgehen
+    foreach($data as $column => $var) {//alle "Zeilen" der Data Tabelle durchgehen
         $output .= '<tr>';
-        if($row===0) {//in Zeile 0 sind die table headers (Name der Entitäten)
-            foreach($var as $col => $val) {//alle "Reihen" der Zeile durchgehen
-                $output .= "<td>" . $col . '</td>';
+        if($column===0) {//in Zeile 0 sind die table headers (Name der Entitäten)
+            foreach($var as $row => $val) {//alle "Reihen" der Zeile durchgehen
+                $output .= "<td>" . $row . '</td>';
             }
             $output .= '</tr>';
         }
@@ -70,13 +70,22 @@ function display_data_edit($data, $options) {
             $output .= '<td>' . $val . '</td>';
         }
         $output .= '<td>' . '<form action="edit_arbeiter.php" method="post"><select class="drop-down" name="arbeiter" id="arbeiter">';
-        foreach($options as $var2) {//alle "Zeilen" der Tabelle durchgehen
+        foreach($options as $var2) {//alle "Zeilen" der Option Tabelle durchgehen
+            $i=0;
+            $temp="";
+            //Arbeiter als Optionen
             foreach($var2 as $val) {//alle "Reihen" der Zeile durchgehen
-                $output .= ' <option value="';
-                $output .= $val . '">'. $val . "</option>";
+                if($i===2) {
+                    $output .= ' <option value="' . $val . '">';
+                }
+                else {
+                    $temp .= $val . " ";
+                    $i++;
+                }
             }
+            $output .= $temp . "</option>";
         }
-        $output .= '<td>' . '<input type="hidden" value='. $var["id"] .' name="auftrag_id" /><input type="submit" value="Auftrag hinzufügen"> </form>'  . '</td>';
+        $output .= '<td>' . '<input type="hidden" value='. $var["id"] .' name="auftrag_id" /><input type="submit" value="Arbeiter zuweisen"> </form>'  . '</td>';
         $output .= '</tr>';
     }
     $output .= '</table>';
