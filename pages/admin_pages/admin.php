@@ -9,14 +9,17 @@ include "../../php_functions/display_data.php";
 
 <html lang="en">
 <head>
-    <title>Alle Aufträge </title>
+    <title>Offene Aufträge </title>
     <link rel="shortcut icon" type="image/png" href="../../images/favicon.png"/>
     <link rel="stylesheet" href="../../css_files/overview.css">
 </head>
 
 <body>
 <div class="topnav">
-    <a class="active" href="admin.php">Alle Aufträge</a>
+    <a class="active" href="admin.php">Offene Aufträge</a>
+    <a  href="alle_auftraege.php">Alle Aufträge</a>
+    <a  href="alle_arbeiter.php">Alle Arbeiter</a>
+    <a  href="alle_kunden.php">Alle Kunden</a>
     <a class="logout" href = "../../php_functions/logout.php">Ausloggen</a>
     <a class="name" ><?php echo $login_session?></a>
 </div>
