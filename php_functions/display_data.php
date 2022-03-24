@@ -69,7 +69,7 @@ function display_data_edit($data, $options) {
         foreach($var as $val) {//alle "Reihen" der Zeile durchgehen
             $output .= '<td>' . $val . '</td>';
         }
-        $output .= '<td>' . '<form action="edit_arbeiter.php" method="post"><select class="drop-down" name="arbeiter" id="arbeiter">';
+        $output .= '<td>' . '<form action="../../php_functions/edit_arbeiter.php" method="post"><select class="drop-down" name="arbeiter_id" id="arbeiter_id">';
         foreach($options as $var2) {//alle "Zeilen" der Option Tabelle durchgehen
             $i=0;
             $temp="";
