@@ -1,7 +1,7 @@
 <?php
 /*Setzt Auftrag mit übergebener ID auf erledigt*/
 require('connect.php');
-$id=$_REQUEST['id'];//ID via GET holen
+$id=$_POST['auftrag_id'];//ID via post holen
 $query = "UPDATE auftrag SET Erledigt='Y' WHERE id=$id;";
 $result = mysqli_query($conn, $query);
 if ($result) {

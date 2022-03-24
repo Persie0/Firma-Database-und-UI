@@ -7,7 +7,7 @@ include "../../php_functions/display_data.php";
 ?>
 <html lang="en">
 <head>
-    <title>Alle Kunden </title>
+    <title>Alle Aufträge </title>
     <link rel="shortcut icon" type="image/png" href="../../images/favicon.png"/>
     <link rel="stylesheet" href="../../css_files/overview.css">
 </head>
@@ -15,21 +15,22 @@ include "../../php_functions/display_data.php";
 <body>
 <div class="topnav">
     <a  href="admin.php">Offene Aufträge</a>
-    <a   href="alle_auftraege.php">Alle Aufträge</a>
+    <a  href="alle_auftraege.php">Alle Aufträge</a>
     <a  href="alle_arbeiter.php">Alle Arbeiter</a>
-    <a  class="active" href="alle_kunden.php">Alle Kunden</a>
-    <a href="arbeiter_zuweisen.php">Arbeiter zuweisen</a>
+    <a  href="alle_kunden.php">Alle Kunden</a>
+    <a class="active" href="arbeiter_zuweisen.php">Arbeiter zuweisen</a>
     <a class="logout" href = "../../php_functions/logout.php">Ausloggen</a>
     <a class="name" ><?php echo $login_session?></a>
 </div>
 <div>
     <?php
-    $query = "select * from kunde;
-
+    $query = "select auftrag.id, Standort, Preis, Deadline, Art, Erledigt from auftrag join Logo on LogoID=logo.ID where ArbeiterID=1;
 ";
     $result = mysqli_query($conn, $query);
     /*Alle Aufträge anzeigen lassen*/
-    display_data($result);
+    $query = "select arbeiter.vorname as 'Arbeitervorname',arbeiter.Nachname as 'Arbeiternachname', ID from arbeiter;";
+    $options = mysqli_query($conn, $query);
+    display_data_edit($result, $options)
     ?>
 </div>
 </body>

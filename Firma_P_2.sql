@@ -75,7 +75,7 @@ FOREIGN KEY (KundeID) REFERENCES Kunde(ID),
 FOREIGN KEY (ArbeiterID) REFERENCES Arbeiter(ID)
 );
 insert into Auftrag (Preis, Erstelldatum, Deadline, Art, LogoID, KundeID, ArbeiterID, Erledigt) value ('100000', '2021-10-22','2022-08-01', 'Reparatur','1','2','3','Y');
-insert into Auftrag (Preis, Erstelldatum, Deadline, Art, LogoID, KundeID, ArbeiterID) value ('3000', '2021-10-25','2022-08-02', 'Anbringen','2','2','1');
+insert into Auftrag (Preis, Erstelldatum, Deadline, Art, LogoID, KundeID, ArbeiterID) value ('3000', '2021-10-25','2022-08-02', 'Anbringen','2','2','2');
 insert into Auftrag (Preis, Erstelldatum, Deadline, Art, LogoID, KundeID, ArbeiterID) value ('1200', '2021-10-29','2022-01-01', 'Abbauen','2','2','1');
 insert into Auftrag (Preis, Erstelldatum, Deadline, Art, LogoID, KundeID, ArbeiterID) value ('5000', '2021-11-30','2022-03-07', 'Reparatur','2','2','1');
 insert into Auftrag (Preis, Erstelldatum, Deadline, Art, LogoID, KundeID, ArbeiterID, Erledigt) value ('30000', '2021-12-22','2022-04-21', 'Anbringen','5','5','2','Y');

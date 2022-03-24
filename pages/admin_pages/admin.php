@@ -20,6 +20,7 @@ include "../../php_functions/display_data.php";
     <a  href="alle_auftraege.php">Alle Aufträge</a>
     <a  href="alle_arbeiter.php">Alle Arbeiter</a>
     <a  href="alle_kunden.php">Alle Kunden</a>
+    <a href="arbeiter_zuweisen.php">Arbeiter zuweisen</a>
     <a class="logout" href = "../../php_functions/logout.php">Ausloggen</a>
     <a class="name" ><?php echo $login_session?></a>
 </div>
