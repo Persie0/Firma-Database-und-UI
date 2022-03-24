@@ -1,4 +1,4 @@
-<!--Adminseite, zu der man nach dem Login als Admin hinkommt
+<!--Adminseite, zu der man nach dem Login als Admin hinkommt,
 zeigt alle ausstehenden Aufträge + Arbeiter dazu an-->
 
 <?php

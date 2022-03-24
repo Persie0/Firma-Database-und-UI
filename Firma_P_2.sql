@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS firma_db;
 create database firma_db;
 use firma_db;
 
@@ -48,6 +49,7 @@ Email varchar(40) NOT NULL,
 Passwort varchar(40) NOT NULL,
 PRIMARY KEY (ID)
 );
+insert into Arbeiter (Vorname, Nachname, Telefonnummer, Email, Passwort) value ('Admin', '', '', 'admin@mail.com', '1234');
 insert into Arbeiter (Vorname, Nachname, Telefonnummer, Email, Passwort) value ('Lukas', 'Barth', '721458621', 'lukas@hey.com', 'lukasworker');
 insert into Arbeiter (Vorname, Nachname, Telefonnummer, Email, Passwort) value ('Rene', 'Soos', '+420721188908', 'rene.soos@hey.com', 'starwars');
 insert into Arbeiter (Vorname, Nachname, Telefonnummer, Email, Passwort) value ('Daniel', 'Raab', '2147483647', 'haloe332@hey.com', 'raab200');
