@@ -57,7 +57,7 @@ VALUES ('$location', '$logo', '$type');";
     }
     else
     {
-        $required = array('auftragsart2', 'logo_select', 'ID', 'deadline');
+        $required = array('auftragsart2', 'logo_select', 'deadline');
         foreach($required as $field) {
             if (empty($_POST[$field])) {
                 $_SESSION["error"] = "Ein Eingabefeld war leer!";
