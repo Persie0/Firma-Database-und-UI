@@ -1,4 +1,4 @@
-<!--Arbeiterseite, zu der man nach dem Login als Arbeiter hinkommt-->
+<!--Admin kann hier alle Aufträge + Arbeiter + Kunde sehen-->
 <?php
 include "../../php_functions/session.php";
 include "../../php_functions/connect.php";
@@ -25,7 +25,7 @@ include "../../php_functions/display_data.php";
 <div>
     <?php
     $query = "select logo.standort, Deadline, auftrag.art, auftrag.Erstelldatum,kunde.vorname as 'Kundenvorname', kunde.nachname as 'Kundennachname',kunde.Telefonnummer as 'KundeTNr.', arbeiter.vorname as 'Arbeitervorname',arbeiter.Nachname as 'Arbeiternachname', arbeiter.Telefonnummer as 'ArbeiterTNr.'
-from logo join auftrag on logo.id = auftrag.logoid join kunde on auftrag.kundeid = kunde.id join arbeiter on auftrag.arbeiterid = arbeiter.id order by Deadline asc ;
+from logo join auftrag on logo.id = auftrag.logoid join kunde on auftrag.kundeid = kunde.id join arbeiter on auftrag.arbeiterid = arbeiter.id order by Deadline;
 
 ";
     $result = mysqli_query($conn, $query);

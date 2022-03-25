@@ -1,6 +1,6 @@
+<!--Hier kann der Kunde einen neuen Auftrag hinzufügen
+mittels verschiedenen Formelementen-->
 <?php
-/*Hier kann der Kunde einen neuen Auftrag hinzufügen
-mittels verschiedenen Formelementen*/
 include "../../php_functions/session.php";
 include "../../php_functions/connect.php";
 include "../../php_functions/display_data.php";

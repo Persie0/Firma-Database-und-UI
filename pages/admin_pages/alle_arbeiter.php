@@ -1,4 +1,4 @@
-<!--Arbeiterseite, zu der man nach dem Login als Arbeiter hinkommt-->
+<!--Admin kann hier alle Arbeiter sehen-->
 <?php
 include "../../php_functions/session.php";
 include "../../php_functions/connect.php";

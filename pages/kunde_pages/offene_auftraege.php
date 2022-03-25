@@ -1,4 +1,4 @@
-<!--Arbeiterseite, zu der man nach dem Login als Arbeiter hinkommt
+<!--Arbeiterseite, zu der man nach dem Login als Arbeiter hinkommt,
 man kann Aufträge als erledigt markieren-->
 <?php
 include "../../php_functions/session.php";

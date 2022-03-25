@@ -1,4 +1,5 @@
-<!--Arbeiterseite, zu der man nach dem Login als Arbeiter hinkommt-->
+<!--Neue Aufträge werden immer dem Admin zugewiesen,
+dieser kann dann hier einen Arbeiter zuweisen-->
 <?php
 include "../../php_functions/session.php";
 include "../../php_functions/connect.php";

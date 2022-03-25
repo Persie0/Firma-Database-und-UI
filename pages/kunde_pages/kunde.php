@@ -1,4 +1,4 @@
-<!--Kundenseite, zu der man nach dem Login als Arbeiter hinkommt-->
+<!--Kundenseite, zu der man nach dem Login als Kunde hinkommt-->
 <?php
 include "../../php_functions/session.php";
 include "../../php_functions/connect.php";
@@ -12,7 +12,7 @@ include "../../php_functions/display_data.php";
 </head>
 
 <body>
-<!--Zeigt Usernamen und Interaktionsopionen als Navigationsbar-->
+<!--Zeigt Usernamen und Interaktionsoptionen als Navigationsbar-->
 <div class="topnav">
     <a class="active" href="kunde.php">Alle Aufträge</a>
     <a href="add_auftrag.php">Auftrag hinzufügen</a>

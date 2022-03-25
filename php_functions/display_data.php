@@ -14,6 +14,7 @@ function display_data_erledigt($data) {
         foreach($var as $val) {//alle "Reihen" der Zeile durchgehen
             $output .= '<td>' . $val . '</td>';
         }
+        //am Ende der "Reihe" Erledigt "Button"
         $output .= '<td>' . '<form action="../../php_functions/erledigt.php" method="post">' . '<input type="hidden" value='. $var["id"] .' name="auftrag_id" /><input type="submit" value="Auftrag erledigen"> </form>' . '</td>';
         $output .= '</tr>';
     }
@@ -69,6 +70,7 @@ function display_data_edit($data, $options) {
         foreach($var as $val) {//alle "Reihen" der Zeile durchgehen
             $output .= '<td>' . $val . '</td>';
         }
+        //Vorletzte "Reihe" Arbeiter Auswahl
         $output .= '<td>' . '<form action="../../php_functions/edit_arbeiter.php" method="post"><select class="drop-down" name="arbeiter_id" id="arbeiter_id">';
         foreach($options as $var2) {//alle "Zeilen" der Option Tabelle durchgehen
             $i=0;
@@ -85,6 +87,7 @@ function display_data_edit($data, $options) {
             }
             $output .= $temp . "</option>";
         }
+        //am Ende der "Reihe" "Button"
         $output .= '<td>' . '<input type="hidden" value='. $var["id"] .' name="auftrag_id" /><input type="submit" value="Arbeiter zuweisen"> </form>'  . '</td>';
         $output .= '</tr>';
     }
