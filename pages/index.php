@@ -6,13 +6,13 @@ session_start();
     <html lang="en">
     <head>
         <title>Log In</title>
-        <link rel="shortcut icon" type="image/png" href="../images/favicon.png"/>
+        <link rel="shortcut icon" type="image/png" href="../images/favicon.jpg"/>
         <link rel="stylesheet" href="../css_files/login_page.css">
     </head>
     <body>
     <div class="parent clearfix">
         <div class="bg-illustration">
-            <!--<img src="../images/favicon.png" alt="logo">-->
+            <!--<img src="../images/favicon.jpg" alt="logo">-->
         </div>
 
         <div class="login">
