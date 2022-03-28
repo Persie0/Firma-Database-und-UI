@@ -31,7 +31,7 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: darkgrey;
+    background-color: rgba(169, 169, 169, 0.7);
 }
 
 .container {
