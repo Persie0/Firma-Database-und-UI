@@ -65,13 +65,14 @@ function display_data_edit($data, $options) {
             foreach($var as $row => $val) {//alle "Reihen" der Zeile durchgehen
                 $output .= "<td>" . $row . '</td>';
             }
+            $output .= "<td> Arbeiter auswählen:</td>";
             $output .= '</tr>';
         }
         foreach($var as $val) {//alle "Reihen" der Zeile durchgehen
             $output .= '<td>' . $val . '</td>';
         }
         //Vorletzte "Reihe" Arbeiter Auswahl
-        $output .= '<td>' . '<form action="../../php_functions/edit_arbeiter.php" method="post"><select class="drop-down" name="arbeiter_id" id="arbeiter_id">';
+        $output .= '<td>' . '<form action="../../php_functions/edit_arbeiter.php" method="post"><select class="arbeiter_select" name="arbeiter_id" id="arbeiter_id">';
         foreach($options as $var2) {//alle "Zeilen" der Option Tabelle durchgehen
             $i=0;
             $temp="";

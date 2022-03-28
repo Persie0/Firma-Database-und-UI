@@ -8,7 +8,7 @@ include "../../php_functions/display_data.php";
 ?>
 <html lang="en">
 <head>
-    <title>Alle Aufträge </title>
+    <title>Arbeiter zuweisen </title>
     <link rel="shortcut icon" type="image/png" href="../../images/favicon.png"/>
     <link rel="stylesheet" href="../../css_files/overview.css">
 </head>
