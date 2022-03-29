@@ -1,5 +1,4 @@
-<!--Neue Aufträge werden immer dem Admin zugewiesen,
-dieser kann dann hier einen Arbeiter zuweisen-->
+<!--Arbeiterseite, zu der man nach dem Login als Arbeiter hinkommt-->
 <?php
 include "../../php_functions/session.php";
 include "../../php_functions/connect.php";
@@ -8,8 +7,8 @@ include "../../php_functions/display_data.php";
 ?>
 <html lang="en">
 <head>
-    <title>Arbeiter zuweisen </title>
-    <link rel="shortcut icon" type="image/png" href="../../images/favicon.jpg"/>
+    <title>Alle Aufträge </title>
+    <link rel="shortcut icon" type="image/png" href="../../images/favicon.png"/>
     <link rel="stylesheet" href="../../css_files/overview.css">
 </head>
 
@@ -25,7 +24,7 @@ include "../../php_functions/display_data.php";
 </div>
 <div>
     <?php
-    $query = "select auftrag.id as 'Auftrag ID', Standort, Preis, Deadline, Art, Erledigt from auftrag join Logo on LogoID=logo.ID where ArbeiterID=1;
+    $query = "select auftrag.id, Standort, Preis, Deadline, Art, Erledigt from auftrag join Logo on LogoID=logo.ID where ArbeiterID=1;
 ";
     $result = mysqli_query($conn, $query);
     /*Alle Aufträge anzeigen lassen*/

@@ -21,7 +21,7 @@ include "../../php_functions/display_data.php";
 </div>
 <div>
 <?php
-$query = "select auftrag.id ,logo.standort, deadline, typ, art, erledigt
+$query = "select Auftrag.ID ,Logo.Standort, Deadline, Typ, Art, Erledigt
 from logo join auftrag on logo.id = auftrag.logoid join arbeiter on auftrag.arbeiterid = arbeiter.id
  WHERE Email='$email_check' AND Passwort='$pass_check';
 ";

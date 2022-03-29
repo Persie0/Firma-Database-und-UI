@@ -34,7 +34,7 @@ include "../../php_functions/display_data.php";
         <option value="new">new</option>
         <?php
         /*Alle Standorte des Users als Option ausgeben*/
-        $query = "select distinct standort
+        $query = "select distinct Standort
 from logo join auftrag on logo.id = auftrag.logoid join kunde on auftrag.kundeid = kunde.id WHERE Email='$email_check' AND Passwort='$pass_check' order by Erstelldatum;
 ";
         $result = mysqli_query($conn, $query);

@@ -1,4 +1,4 @@
-<!--Arbeiterseite, zu der man nach dem Login als Arbeiter hinkommt,
+<!--Arbeiterseite, zu der man nach dem Login als Arbeiter hinkommt
 man kann Aufträge als erledigt markieren-->
 <?php
 include "../../php_functions/session.php";
@@ -9,7 +9,7 @@ include "../../php_functions/display_data.php";
 <html lang="en">
 <head>
     <title>Offene Aufträge </title>
-    <link rel="shortcut icon" type="image/png" href="../../images/favicon.jpg"/>
+    <link rel="shortcut icon" type="image/png" href="../../images/favicon.png"/>
     <link rel="stylesheet" href="../../css_files/overview.css">
 </head>
 
@@ -23,7 +23,7 @@ include "../../php_functions/display_data.php";
 </div>
 
 <?php
-$query = "select auftrag.ID as 'Auftrag ID',logo.Standort, Deadline, Typ, Art, arbeiter.Vorname as 'Arbeitervorname', arbeiter.Nachname as 'Arbeiternachname', arbeiter.Telefonnummer as 'ArbeiterTNr'
+$query = "select auftrag.ID ,logo.Standort, Deadline, Typ, Art, arbeiter.Vorname as 'Arbeitervorname', arbeiter.Nachname as 'Arbeiternachname', arbeiter.Telefonnummer as 'ArbeiterTNr'
 from logo join auftrag on logo.id = auftrag.logoid join arbeiter on auftrag.arbeiterid = arbeiter.id join kunde on auftrag.KundeID = kunde.ID
  WHERE kunde.Email='$email_check' AND kunde.Passwort='$pass_check' and Erledigt = 'N' order by auftrag.ID;
 ";

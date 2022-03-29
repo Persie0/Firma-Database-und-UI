@@ -15,7 +15,7 @@ function display_data_erledigt($data) {
             $output .= '<td>' . $val . '</td>';
         }
         //am Ende der "Reihe" Erledigt "Button"
-        $output .= '<td>' . '<form action="../../php_functions/erledigt.php" method="post">' . '<input type="hidden" value='. $var["id"] .' name="auftrag_id" /><input type="submit" value="Auftrag erledigen"> </form>' . '</td>';
+        $output .= '<td>' . '<form action="../../php_functions/erledigt.php" method="post">' . '<input type="hidden" value='. $var["ID"] .' name="auftrag_id" /><input type="submit" value="Auftrag erledigen"> </form>' . '</td>';
         $output .= '</tr>';
     }
     $output .= '</table>';
@@ -89,7 +89,7 @@ function display_data_edit($data, $options) {
             $output .= $temp . "</option>";
         }
         //am Ende der "Reihe" "Button"
-        $output .= '<td>' . '<input type="hidden" value='. $var["id"] .' name="auftrag_id" /><input type="submit" value="Arbeiter zuweisen"> </form>'  . '</td>';
+        $output .= '<td>' . '<input type="hidden" value='. $var["ID"] .' name="auftrag_id" /><input type="submit" value="Arbeiter zuweisen"> </form>'  . '</td>';
         $output .= '</tr>';
     }
     $output .= '</table>';

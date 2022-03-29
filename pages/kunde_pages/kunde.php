@@ -22,7 +22,7 @@ include "../../php_functions/display_data.php";
 </div>
 <div>
     <?php
-    $query = "select preis, art, erstelldatum, standort, deadline, erledigt
+    $query = "select Preis, Art, Erstelldatum, Standort, Deadline, Erledigt
 from logo join auftrag on logo.id = auftrag.logoid join kunde on auftrag.kundeid = kunde.id WHERE Email='$email_check' AND Passwort='$pass_check' order by auftrag.id desc;
 ";
     $result = mysqli_query($conn, $query);

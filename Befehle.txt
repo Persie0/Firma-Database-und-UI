@@ -1,13 +1,13 @@
 Aufträge von Arbeiter x
-select logo.standort, deadline, typ, art, erledigt
+select Logo.standort, Deadline, Typ, Art, Erledigt
 from logo join auftrag on logo.id = auftrag.logoid join arbeiter on auftrag.arbeiterid = arbeiter.id where arbeiter.id = '2';
 
 Aufträge von Kunde x
-select preis, art, erstelldatum, deadline, standort, erledigt
+select Preis, Art, Erstelldatum, Deadline, Standort, Erledigt
 from logo join auftrag on logo.id = auftrag.logoid join kunde on auftrag.kundeid = kunde.id where kunde.id = '2' order by deadline;
 
 Arbeiter der für Auftrag von Kunde x zuständig ist
-select logo.standort, arbeiter.vorname as 'Arbeitervorname', arbeiter.nachname as 'Arbeiternachname', arbeiter.telefonnummer as 'Arbeitertelefonummer'
+select Logo.standort, Arbeiter.vorname as 'Arbeitervorname', Arbeiter.nachname as 'Arbeiternachname', Arbeiter.telefonnummer as 'Arbeitertelefonummer'
 from logo join auftrag on logo.id = auftrag.logoid join kunde on auftrag.kundeid = kunde.id join arbeiter on auftrag.arbeiterid = arbeiter.id where kunde.id = '2';
 
 Ausstehende Aufträge
