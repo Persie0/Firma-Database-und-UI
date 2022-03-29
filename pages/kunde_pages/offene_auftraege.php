@@ -23,7 +23,7 @@ include "../../php_functions/display_data.php";
 </div>
 
 <?php
-$query = "select auftrag.ID ,logo.Standort, Deadline, Typ, Art, arbeiter.Vorname as 'Arbeitervorname', arbeiter.Nachname as 'Arbeiternachname', arbeiter.Telefonnummer as 'ArbeiterTNr'
+$query = "select auftrag.ID as 'Auftrag ID',logo.Standort, Deadline, Typ, Art, arbeiter.Vorname as 'Arbeitervorname', arbeiter.Nachname as 'Arbeiternachname', arbeiter.Telefonnummer as 'ArbeiterTNr'
 from logo join auftrag on logo.id = auftrag.logoid join arbeiter on auftrag.arbeiterid = arbeiter.id join kunde on auftrag.KundeID = kunde.ID
  WHERE kunde.Email='$email_check' AND kunde.Passwort='$pass_check' and Erledigt = 'N' order by auftrag.ID;
 ";
