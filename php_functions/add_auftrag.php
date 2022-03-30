@@ -15,7 +15,7 @@ if (mysqli_num_rows($result) === 1)
     $row = mysqli_fetch_array($result);
     $id=$row['ID'];
     $deadline = $_POST['deadline'];
-    if($logo=== "new")
+    if($logo=== "Anbringen")
     {
         $required = array('logo_select', 'deadline', 'location', 'auftragsart', 'type_select');//type_select= type & cost
         foreach($required as $field) {
@@ -66,7 +66,7 @@ VALUES ('$location', '$logo', '$type');";
             }
         }
         $auftragsart = $_POST['auftragsart2'];
-        if($auftragsart==="repair")
+        if($auftragsart==="Reparieren")
             $cost=190;
         else
             $cost=230;

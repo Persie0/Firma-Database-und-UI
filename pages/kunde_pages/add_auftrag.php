@@ -31,7 +31,7 @@ include "../../php_functions/display_data.php";
     <label for="logo_select">Logo-Standort:
     </label>
     <select class="type_select" id="logo_select" name="logo_select">
-        <option value="new">new</option>
+        <option value="Anbringen">Neuer Standort</option>
         <?php
         /*Alle Standorte des Users als Option ausgeben*/
         $query = "select distinct Standort
@@ -43,7 +43,7 @@ from logo join auftrag on logo.id = auftrag.logoid join kunde on auftrag.kundeid
         ?>
     </select>
     <div id="advanced">
-        <label for="location">Gebäudeort:</label><input type="text" id="location" placeholder="location"
+        <label for="location">Gebäudeort:</label><input type="text" id="location" placeholder="Standort"
         name="location">
         <label for="type_select">Logotyp:</label>
         <select class="type_select" id="type_select" name="type_select">
@@ -56,14 +56,14 @@ from logo join auftrag on logo.id = auftrag.logoid join kunde on auftrag.kundeid
         </select>
         <label for="auftragsart">Auftragsart:
         </label><select class="drop-down" name="auftragsart" id="auftragsart">
-            <option value="new">Anbringen</option>
+            <option value="Anbringen">Anbringen</option>
         </select>
     </div>
     <div id="advanced2" style="display:none">
         <label for="auftragsart2">Auftragsart:
         </label><select class="drop-down" name="auftragsart2" id="auftragsart2">
-            <option value="repair">Reparieren</option>
-            <option value="delete">Abbauen</option>
+            <option value="Reparieren">Reparieren</option>
+            <option value="Abbauen">Abbauen</option>
         </select>
     </div>
     <br>
@@ -79,8 +79,8 @@ from logo join auftrag on logo.id = auftrag.logoid join kunde on auftrag.kundeid
         /*Je nachdem ob ein neuer Standort hinzugefügt wird oder nicht, werden
         * verschiedene Optionen bei Auftragsart angezeigt*/
         document.getElementById("logo_select").onchange = function () {
-            document.getElementById("advanced2").style.display = document.getElementById("logo_select").value === "new" ? "none" : "block";
-            document.getElementById("advanced").style.display = document.getElementById("logo_select").value === "new" ? "block" : "none";
+            document.getElementById("advanced2").style.display = document.getElementById("logo_select").value === "Anbringen" ? "none" : "block";
+            document.getElementById("advanced").style.display = document.getElementById("logo_select").value === "Anbringen" ? "block" : "none";
         };
     </script>
 </form>

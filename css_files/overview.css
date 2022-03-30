@@ -31,7 +31,8 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: white;
+    background-color: rgba(57, 57, 57, 0.12);
+    -webkit-text-fill-color: white;
 }
 
 .container {
@@ -223,15 +224,26 @@ a.name:hover {
 .returnOrder input[type=date],
 .returnOrder input[type=select],
 .returnOrder input[type=text] {
+    font-size: 16px;
+    -webkit-text-fill-color: black;
+    color: #212121;
+    fill: #212121;
     width: 95%;
     padding: 12px 20px;
     margin: 8px 0;
     display: block;
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 4px;
     box-sizing: border-box;
     resize: none;
     text-align: left;
+}
+
+.returnOrder select,
+.returnOrder input[type=date],
+.returnOrder input[type=select],
+.returnOrder input[type=text],  textarea {
+    background-color : darkgrey;
 }
 
 .returnOrder input[type=date]:focus,
@@ -246,7 +258,6 @@ a.name:hover {
 }
 
 .returnOrder {
-
     background-color: rgb(0, 0, 0);
     box-shadow: rgb(62 71 76) 1px 1px 5px;
     border-radius: 5px;
