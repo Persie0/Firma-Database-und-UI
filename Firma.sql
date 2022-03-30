@@ -69,7 +69,7 @@ Erledigt VARCHAR(1) NOT NULL DEFAULT 'N',
 LogoID int NOT NULL,
 KundeID int NOT NULL,
 ArbeiterID int NOT NULL,
-primary key (id),
+primary key (ID),
 FOREIGN KEY (LogoID) REFERENCES Logo(ID),
 FOREIGN KEY (KundeID) REFERENCES Kunde(ID),
 FOREIGN KEY (ArbeiterID) REFERENCES Arbeiter(ID)

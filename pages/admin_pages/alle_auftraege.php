@@ -24,7 +24,7 @@ include "../../php_functions/display_data.php";
 </div>
 <div>
     <?php
-    $query = "select logo.Standort, Deadline, auftrag.Art, auftrag.Erstelldatum, kunde.vorname as 'Kundenvorname', kunde.Nachname as 'Kundennachname', kunde.Telefonnummer as 'KundeTNr.', arbeiter.Vorname as 'Arbeitervorname', arbeiter.Nachname as 'Arbeiternachname', arbeiter.Telefonnummer as 'ArbeiterTNr.'
+    $query = "select Deadline, auftrag.ID as 'AuftragID', logo.Standort, auftrag.Art, auftrag.Erstelldatum, kunde.vorname as 'Kundenvorname', kunde.Nachname as 'Kundennachname', kunde.Telefonnummer as 'KundeTNr.', arbeiter.Vorname as 'Arbeitervorname', arbeiter.Nachname as 'Arbeiternachname', arbeiter.Telefonnummer as 'ArbeiterTNr.'
 from logo join auftrag on logo.id = auftrag.logoid join kunde on auftrag.kundeid = kunde.id join arbeiter on auftrag.arbeiterid = arbeiter.id order by Deadline;
 
 ";

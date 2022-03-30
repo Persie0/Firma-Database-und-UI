@@ -89,7 +89,7 @@ function display_data_edit($data, $options) {
             $output .= $temp . "</option>";
         }
         //am Ende der "Reihe" "Button"
-        $output .= '<td>' . '<input type="hidden" value='. $variable ["id"] .' name="auftrag_id" /><input type="submit" value="Arbeiter zuweisen"> </form>'  . '</td>';
+        $output .= '<td>' . '<input type="hidden" value='. $variable ["AuftragID"] .' name="auftrag_id" /><input type="submit" value="Arbeiter zuweisen"> </form>'  . '</td>';
         $output .= '</tr>';
     }
     $output .= '</table>';

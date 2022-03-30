@@ -24,7 +24,7 @@ include "../../php_functions/display_data.php";
 </div>
 <div>
     <?php
-    $query = "select auftrag.id, Standort, Preis, Deadline, Art, Erledigt from auftrag join Logo on LogoID=logo.ID where ArbeiterID=1;
+    $query = "select auftrag.id as 'AuftragID', Standort, Preis, Deadline, Art, Erledigt from auftrag join Logo on LogoID=logo.ID where ArbeiterID=1;
 ";
     $result = mysqli_query($conn, $query);
     /*Alle Aufträge anzeigen lassen*/
