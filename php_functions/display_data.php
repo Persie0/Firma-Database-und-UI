@@ -59,16 +59,16 @@ function display_options($data) {
 //gibt ganzen Daten des übergebenen Datensatz als Table aus + Auswahl von Arbeiter und Button um auswahl zu speichern
 function display_data_edit($data, $options) {
     $output = "<table class='data_table'>";
-    foreach($data as $column => $var) {//alle "Zeilen" der Data Tabelle durchgehen
+    foreach($data as $column => $variable) {//alle "Zeilen" der Data Tabelle durchgehen
         $output .= '<tr>';
         if($column===0) {//in Zeile 0 sind die table headers (Name der Entitäten)
-            foreach($var as $row => $val) {//alle "Reihen" der Zeile durchgehen
+            foreach($variable as $row => $val) {//alle "Reihen" der Zeile durchgehen
                 $output .= "<td>" . $row . '</td>';
             }
             $output .= "<td> Arbeiter auswählen:</td>";
             $output .= '</tr>';
         }
-        foreach($var as $val) {//alle "Reihen" der Zeile durchgehen
+        foreach($variable as $val) {//alle "Reihen" der Zeile durchgehen
             $output .= '<td>' . $val . '</td>';
         }
         //Vorletzte "Reihe" Arbeiter Auswahl
@@ -89,7 +89,7 @@ function display_data_edit($data, $options) {
             $output .= $temp . "</option>";
         }
         //am Ende der "Reihe" "Button"
-        $output .= '<td>' . '<input type="hidden" value='. $var["ID"] .' name="auftrag_id" /><input type="submit" value="Arbeiter zuweisen"> </form>'  . '</td>';
+        $output .= '<td>' . '<input type="hidden" value='. $variable ["id"] .' name="auftrag_id" /><input type="submit" value="Arbeiter zuweisen"> </form>'  . '</td>';
         $output .= '</tr>';
     }
     $output .= '</table>';
