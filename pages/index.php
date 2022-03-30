@@ -35,7 +35,7 @@ session_start();
                             ?>
                         </div>
                         <div class="forget-pass">
-                            <a href="mailto:marek@mail.com">Forgot password?</a>
+                            <a href="tel:555-666-7777">Forgot password?</a>
                         </div>
                         <button type="submit">Login</button>
 
