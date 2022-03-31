@@ -297,6 +297,6 @@ select {
     cursor: inherit;
     line-height: inherit;
 }
-.arbeiter_select option {
-    background-color: #333;
+.arbeiter_select{
+    background-color: #484848;
 }
