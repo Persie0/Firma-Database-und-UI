@@ -21,7 +21,7 @@ include "../../php_functions/display_data.php";
     <a class="name" ><?php echo $login_session?></a>
 </div>
 
-//Form um neuen Auftrag hinzuzufügen
+<!--Form um neuen Auftrag hinzuzufügen-->
 <form class="returnOrder" action="../../php_functions/add_auftrag.php" method="post">
     <h4 class="returnTitle"> Auftrag hinzufügen </h4>
     <br>
